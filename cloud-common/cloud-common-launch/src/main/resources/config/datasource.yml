@@ -1,0 +1,39 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      # 初始化连接的数量
+      initial-size: 5
+      # 连接池的最小数量
+      min-idle: 5
+      # 连接池最大数量
+      max-active: 20
+      # 配置获取连接等待超时的时间
+      max-wait: 60000
+      # 用来检测连接是否有效的sql，要求是一个查询语句，常用select 'x'。
+      validation-query: select 1
+      # 配置间隔多久进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      validation-query-timeout: 2000
+      # 配置间隔多久进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      time-between-eviction-runs-millis: 60000
+      # 一个链接在池中最小的生存的时间，单位是毫秒
+      min-evictable-idle-time-millis: 300000
+      test-on-borrow: false
+      test-on-return: false
+      test-while-idle: true
+#      基础监控配置
+#      web-stat-filter:
+#        enabled: false
+#        url-pattern: /*
+#        exclusions: '*.js,*.gif,*.jpg,*.bmp,*.png,*.css,*.ico,/druid/*'
+#        session-stat-enable: true
+#        session-stat-max-count: 100
+#      stat-view-servlet:
+#        enabled: false
+#        reset-enable: true
+#        url-pattern: /druid/*
+#        login-username: root
+#        login-password: 1qaz@WSX
+#        allow: 127.0.0.1
+#        deny: 192.168.1.100

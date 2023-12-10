@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.dething.cloud</groupId>
+    <artifactId>cloud-common-bom</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>cloud-common-bom</name>
+    <description>cloud-framework-common-dependencies</description>
+
+    <properties>
+        <mysql.version>8.0.28</mysql.version>
+        <mybatis-plus.version>3.5.3.1</mybatis-plus.version>
+        <alibaba.druid.version>1.2.18</alibaba.druid.version>
+        <alibaba.fastjson2.version>2.0.38</alibaba.fastjson2.version>
+        <freemarker.version>2.3.31</freemarker.version>
+        <telgram.bot.version>6.5.0</telgram.bot.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.alibaba.fastjson2</groupId>
+                <artifactId>fastjson2</artifactId>
+                <version>${alibaba.fastjson2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.freemarker</groupId>
+                <artifactId>freemarker</artifactId>
+                <version>${freemarker.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+                <scope>runtime</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${alibaba.druid.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.telegram</groupId>
+                <artifactId>telegrambots</artifactId>
+                <version>${telgram.bot.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

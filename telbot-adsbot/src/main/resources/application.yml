@@ -1,0 +1,23 @@
+server:
+  port: 8006
+spring:
+  profiles:
+    # 环境拓展名
+    active: prod
+  datasource:
+    url: ${mysql-config.telbot.url}
+    username: ${mysql-config.telbot.username}
+    password: ${mysql-config.telbot.password}
+#    url: jdbc:mysql://121.43.141.16:3306/telbot?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&tinyInt1isBit=false&allowMultiQueries=true&serverTimezone=GMT%2B8
+#    username: telbot
+#    password: xbLTBGCn2BSwsyMh
+mybatis-plus:
+  global-config:
+    db-config:
+      table-prefix: tel_
+
+#nacos:
+#  url: 127.0.0.1:8848
+#  std: 127.0.0.1:8858
+#  nacos-version: 1.2.0
+#version: V1.0.0.6
